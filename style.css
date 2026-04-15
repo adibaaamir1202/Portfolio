@@ -1,3 +1,121 @@
+/* --- header styles --- */
+.main-header {
+    background: #ffffff;
+    padding: 1rem 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---landing page styles --- */
+.landing-page {
+    height: 100vh; /* full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    padding: 0 8%;
+    padding-top: 80px; /* space for the fixed header */
+}
+
+.landing-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    gap: 50px;
+}
+
+.text-area h1 {
+    font-size: 3.5rem;
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: #486581;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.btn-primary {
+    background: #243b53;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    border: 2px solid #234b53;
+    color: #243b53;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* ---footer styles ---*/
+.main-footer {
+    background: #102a43;
+    color: #bcccdc;
+    padding: 40px 8% 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-socials {
+    margin: 20px 0;
+}
+
+.footer-socials {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+/* hover effect */
+.footer-socials a:hover {
+    color: #0077b5; /*Linkedin blue on hover*/
+    transform: translateY(-5px); /* gentle lift effect */
+}
+
+/* specific hover color for github */
+.footer-socials a[aria-label="GitHub"]:hover {
+    color: #6e5494;
+}
+
+.footer-bottom {
+    border-top: 1px solid #243b53;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -156,5 +274,21 @@ nav {
     }
     .nav-links {
         display: none; /* Simplification for mobile */
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .landing-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .landing-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* circular for mobile */
+    }
+    .cta-buttons {
+        justify-content: center;
     }
 }
