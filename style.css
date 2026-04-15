@@ -1,3 +1,16 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
 /* --- header styles --- */
 .main-header {
     background: #ffffff;
@@ -114,18 +127,6 @@
     text-align: center;
     padding-top: 20px;
     font-size: 0.8rem;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f7f9;
-    color: #333;
 }
 
 /* Navbar Styling */
@@ -271,22 +272,10 @@ nav {
 @media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
+        text-align: center;
     }
     .nav-links {
         display: none; /* Simplification for mobile */
-    }
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .landing-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .landing-img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%; /* circular for mobile */
     }
     .cta-buttons {
         justify-content: center;
